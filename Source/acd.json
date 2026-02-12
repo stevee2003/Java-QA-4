@@ -1,0 +1,103 @@
+{
+  "identity": {
+    "name": "E1 - The Anti-AI Designer",
+    "archetype": "The Swiss Archive",
+    "description": "A digital experience that feels like a high-end, modern physical library. Tactile, organized, and beautifully typographic. Rejects the generic 'SaaS Dashboard' aesthetic in favor of editorial clarity."
+  },
+  "theme": {
+    "mode": "light",
+    "strategy": "Soft Light / Warm Paper",
+    "instructions": "Do not use pure #FFFFFF as the main background. Use the 'Bone' color (#F9F9F7) to create a reading-friendly environment. Use pure white only for input fields and content cards to create depth."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "'Playfair Display', serif",
+      "body": "'Manrope', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');"
+    ],
+    "rules": [
+      "Headings (h1-h3) must use Playfair Display. Use italics for emphasis keywords.",
+      "Body text must use Manrope. High legibility.",
+      "All data in tables (IDs, ISBNs, Dates, Status) must use JetBrains Mono.",
+      "Tracking: Headlines -> tracking-tight. Overlines -> tracking-widest uppercase."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": "#1B4D3E",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#D4A373",
+      "secondary_foreground": "#1A1A1A",
+      "background": "#F9F9F7",
+      "foreground": "#1A1A1A",
+      "muted": "#E5E5E0",
+      "muted_foreground": "#666660",
+      "card": "#FFFFFF",
+      "card_foreground": "#1A1A1A",
+      "border": "#E5E5E0",
+      "input": "#F0F0EE",
+      "ring": "#1B4D3E"
+    },
+    "semantic": {
+      "available": "#1B4D3E",
+      "issued": "#D4A373",
+      "overdue": "#BC4749"
+    },
+    "utility": {
+      "glass": "bg-white/80 backdrop-blur-md border border-white/20"
+    }
+  },
+  "layout_strategy": {
+    "global": [
+      "Use sidebar navigation for the dashboard.",
+      "Main content area must have a 'paper' feel (white card on bone background).",
+      "Use 'Grid Borders' style: Visible 1px borders between grid items instead of gaps."
+    ],
+    "dashboard": "Bento Grid (Mode B). Dense, data-rich but with breathing room.",
+    "table_view": [
+      "Swiss Style Table:",
+      "- No vertical lines inside the table.",
+      "- Strong bottom borders for rows.",
+      "- Numeric data right-aligned.",
+      "- Header text uppercase + tracking-widest + small (text-xs)."
+    ]
+  },
+  "components": {
+    "radius": "rounded-sm",
+    "shadows": "none",
+    "buttons": {
+      "primary": "bg-[#1B4D3E] text-white hover:bg-[#153D31] rounded-sm px-6 py-2 font-medium tracking-wide transition-all active:scale-95",
+      "ghost": "text-[#1B4D3E] hover:bg-[#1B4D3E]/10 rounded-sm"
+    },
+    "cards": {
+      "style": "bg-white border border-[#E5E5E0] p-6 rounded-sm no-shadow"
+    },
+    "inputs": {
+      "style": "bg-[#F0F0EE] border-transparent focus:border-[#1B4D3E] focus:bg-white rounded-sm transition-colors font-mono text-sm"
+    }
+  },
+  "assets": {
+    "images": {
+      "login_hero": "https://images.unsplash.com/photo-1764406807567-a24faaaad034?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxsaWJyYXJ5JTIwYm9va3NoZWx2ZXMlMjBhZXN0aGV0aWMlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcwODE4Njg2fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": "Use 'lucide-react'. Stroke width: 1.5px (Thin/Elegant)."
+  },
+  "instructions_to_main_agent": [
+    "1. THEME SETUP: Update `tailwind.config.js` and `index.css` immediately with the Swiss Archive palette.",
+    "2. FONT SETUP: Import the Google Fonts in `index.css`.",
+    "3. LAYOUT: Create a `DashboardLayout` component that includes the Sidebar and the Main Content Area.",
+    "4. TABLE: Build a reusable `DataTable` component using the Swiss Style rules (no vertical dividers, mono font for data).",
+    "5. LOGIN: Use the `login_hero` image for a split-screen layout. Left side: Image (cover), Right side: Login Form.",
+    "6. MICRO-INTERACTIONS: Add `transition-all duration-200` to all interactive elements. Buttons should have a subtle active scale effect.",
+    "7. DATA-TESTID: Ensure EVERY interactive element (buttons, inputs, rows) has a `data-testid`."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients. Flat color is authoritative.",
+    "Do not center text unless it is a specific headline. Left align is the default for readability.",
+    "Use generous padding. A density of information does not mean cramped space."
+  ]
+}
+
